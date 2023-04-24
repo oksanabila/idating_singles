@@ -1,0 +1,133 @@
+.chat {
+  padding-left: 0;
+  padding-right: 0;
+  .chat-person {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    background-color: $body-bg;
+    box-sizing: border-box;
+  }
+}
+
+.chat-person {
+  $parent: &;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 18px 16px 36px;
+  border-bottom: 1px solid $gray-light;
+  &__title-wrap {
+    display: flex;
+    align-items: center;
+  }
+  &_online {
+    & #{$parent}__img:after {
+      background-color: $green;
+    }
+  }
+  &_offline {
+   & #{$parent}__img:after {
+      background-color: $pink-light;
+    }
+
+  }
+  &__img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 13px;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2px;
+      right: 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+
+      border: 2px solid $body-bg;
+    }
+  }
+  &__name {
+    font-weight: 800;
+  }
+  &__text {
+    width: 70vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.chat-messages {
+  padding: 0 35px 20px;
+  max-height: 65vh;
+  overflow: scroll;
+  margin-top: 90px;
+}
+
+.message-item {
+  $parent: &;
+  //display: flex;
+  //align-items: center;
+  margin: 29px 0;
+  &_myself {
+    //justify-content: end;
+    text-align: right;
+    #{$parent}__text {
+      border-radius: 15px 0 15px 15px;
+      background-color: #DEEACB;
+      text-align: left;
+    }
+  }
+  &__img {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+  }
+  &__text {
+    display: inline-block;
+    padding: 9px 16px 11px 17px;
+    background-color: $pink-light2;
+    border-radius: 0 15px 15px 15px;
+    color: black;
+    vertical-align: top;
+    max-width: 70%;
+
+  }
+}
+
+.chat-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 35px 20px 36px;
+  border-top: 1px solid $gray-light;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $body-bg;
+  box-sizing: border-box;
+}
+
+
+.chat-list {
+  padding-left: 0;
+  padding-right: 0;
+  .chat-person {
+    text-decoration: none;
+    color: black;
+    justify-content: left;
+  }
+}

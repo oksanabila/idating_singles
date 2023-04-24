@@ -1,0 +1,76 @@
+.cards-wrap {
+  display: grid;
+  grid-column-gap: 22px;
+  grid-row-gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 35px;
+}
+
+.card-item {
+  $parent: &;
+  text-decoration: unset;
+  &_detail {
+    margin: 43px 10px 0;
+    #{$parent}__image-inner {
+      padding-top: 55.42vh;
+      margin-bottom: 64px;
+      .btn-round_chat {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        margin-left: -40px;
+      }
+    }
+    #{$parent}__image {
+      border-radius: 20px;
+    }
+  }
+  &__image-inner {
+    position: relative;
+    height: 0;
+    border: none;
+    padding-top: 104%;
+    margin-bottom: 4px;
+  }
+  &__image-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    -webkit-box-reflect: unset;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 14%;
+    border-top-right-radius: 14%;
+  }
+  &__btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_arrow-wrap {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 40vh;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+    .btn-round_arrow-prev {
+      margin-left: -30px;
+    }
+    .btn-round_arrow-next {
+      margin-right: -30px;
+    }
+
+  }
+}
+
+

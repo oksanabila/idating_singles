@@ -1,0 +1,125 @@
+.start {
+  &__logo {
+    margin-bottom: 5.8vh;
+  }
+  &__text {
+    font-size: $font-l;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 6.2vh;
+
+  }
+}
+.start-icons {
+  position: relative;
+  margin-bottom: 75px;
+  height: 43.65vh;
+  width: 100%;
+  //background-color: #E5218F;
+  img {
+    display: none;
+    max-width: 100%;
+  }
+  svg {
+    position: absolute;
+  }
+}
+.icon-wrap {
+  position: absolute;
+  &:nth-child(1) {
+    top: 5vh;
+    left: 0;
+    .icon {
+      width: 170px;
+      height: 170px;
+      &:after {
+        top: -7px;
+        left: 5px;
+      }
+    }
+  }
+  &:nth-child(2) {
+    top: 3vw;
+    right: 3vw;
+    .icon {
+      width: 102px;
+      height: 102px;
+      &:after {
+        top: -9px;
+        right: 4px;
+      }
+    }
+  }
+  &:nth-child(3) {
+    bottom: 0;
+    right: 40px;
+    .icon {
+      width: 120px;
+      height: 120px;
+      &:after {
+        top: -9px;
+        right: 1px;
+      }
+    }
+  }
+}
+
+.icon {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:after {
+    content: '';
+    position: absolute;
+    outline: 3px solid $primary;
+    outline-offset: -3px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  outline: 1px dashed $gray-light;
+  width: 50vw;
+  height: 50vw;
+  bottom: 5vh;
+  right: 15vw;
+  z-index: -1;
+
+  &_big {
+    width: 78vw;
+    height: 78vw;
+    bottom: 2vh;
+    right: 5vw;
+  }
+}
+
+.heart {
+  position: absolute;
+  &:nth-child(1) {
+    top: 3px;
+    margin: 0 50%;
+  }
+  &:nth-child(2) {
+    bottom: 25%;
+    left: 35%;
+  }
+  &:nth-child(3) {
+    bottom: 15%;
+    left: 2%;
+  }
+  &:nth-child(4) {
+    top: 42%;
+    right: 33%;
+  }
+  &:nth-child(5) {
+    margin-top: 49%;
+    right: 14%;
+  }
+
+}

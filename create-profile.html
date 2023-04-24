@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/range-slider-input@2.4/dist/style.css">
+    <link href="css/style.css" rel="stylesheet" media="all">
+    <title>Create Profile</title>
+</head>
+<body>
+<header class="header">
+    <a href="#" class="btn-round btn-round_back"></a>
+    <img class="header__logo" src="img/logo.svg" alt="logo">
+    <a href="#" class="btn-round btn-round_profile"></a>
+</header>
+
+<main class="container">
+    <form id="register" action="#">
+        <h2 class="form-title">Create profile</h2>
+        <div class="form-item">
+            <label class="form-item__label">Full name</label>
+            <input class="form-item__field" type="text" name="username" placeholder="Full name" required>
+        </div>
+        <div class="form-item">
+            <label class="form-item__label">Your name</label>
+            <input class="form-item__field" type="text" name="username" placeholder="Your name" required>
+        </div>
+        <div class="form-item">
+            <label class="form-item__label">Your country</label>
+            <input class="form-item__field" type="text" name="username" placeholder="Country" required>
+        </div>
+        <div class="form-item form-item_switch">
+            <label class="form-item__label">Your gender</label>
+            <div class="switch-field form-item__field">
+                <input type="radio" id="radio-male" name="switch-one" value="male" checked/>
+                <label for="radio-male">Male</label>
+                <input type="radio" id="radio-female" name="switch-one" value="female" />
+                <label for="radio-female">Female</label>
+            </div>
+        </div>
+        <fieldset class="form-group" form="register">
+            <legend class="form-group__label form-item__label">Your hobbies</legend>
+            <div class="form-item form-item_checkbox">
+                <input type="checkbox" id="check_1" name="hobbies" value="music" required>
+                <label for="check_1">Music</label>
+            </div>
+            <div class="form-item form-item_checkbox">
+                <input type="checkbox" id="check_2" name="hobbies" value="sports">
+                <label for="check_2">Sports</label>
+            </div>
+            <div class="form-item form-item_checkbox">
+                <input type="checkbox" id="check_3" name="hobbies" value="travel">
+                <label for="check_3">Travel</label>
+            </div>
+            <div class="form-item form-item_checkbox">
+                <input type="checkbox" id="check_4" name="hobbies" value="movies">
+                <label for="check_4">Movies</label>
+            </div>
+        </fieldset>
+
+        <h2 class="form-title">Search distance</h2>
+        <div id="range-slider" class="range-slider"><!-- range slider element -->
+            <input type="range" /><!-- hidden -->
+            <input type="range" /><!-- hidden -->
+            <div class="range-slider__thumb" data-lower>
+                <span class="data-lower"></span>
+            </div>
+            <div class="range-slider__thumb" data-upper>
+                <span class="data-upper"></span>
+            </div>
+            <div class="range-slider__range"></div>
+        </div>
+        <button class="btn" type="submit" name="submit-button" id="sendRegisterForm">Create profile</button>
+    </form>
+
+</main>
+<footer class="footer">
+    <a class="footer__link" href="#">Privacy Policy</a>
+    <a class="footer__link" href="#">Terms & Conditions</a>
+    <a class="footer__link" href="#">Contact Us</a>
+</footer>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/range-slider-input@2.4/dist/rangeslider.umd.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/script.js" type="application/javascript"></script>
