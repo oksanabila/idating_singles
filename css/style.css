@@ -228,9 +228,9 @@ h2 {
     background-position: center;
     background-repeat: no-repeat; }
   .btn-round_back {
-    background-image: url("/img/back.svg"); }
+    background-image: url("../img/back.svg"); }
   .btn-round_profile {
-    background-image: url("/img/lk.svg"); }
+    background-image: url("../img/lk.svg"); }
   .btn-round_chat {
     width: 80px;
     height: 80px;
@@ -238,14 +238,14 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 37px;
-    background-image: url("/img/btn-chat.svg"); }
+    background-image: url("../img/btn-chat.svg"); }
   .btn-round_send {
     width: 51px;
     height: 51px;
     background-color: #E5218F;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("/img/send.svg"); }
+    background-image: url("../img/send.svg"); }
   .btn-round_arrow-prev, .btn-round_arrow-next {
     position: relative;
     width: 80px;

@@ -56,10 +56,10 @@
     background-repeat: no-repeat;
   }
   &_back {
-    background-image: url("/img/back.svg");
+    background-image: url("../img/back.svg");
   }
     &_profile {
-      background-image: url("/img/lk.svg");
+      background-image: url("../img/lk.svg");
 
     }
 
@@ -70,7 +70,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: 37px;
-      background-image: url("/img/btn-chat.svg");
+      background-image: url("../img/btn-chat.svg");
     }
 
     &_send {
@@ -80,7 +80,7 @@
       background-position: center;
       background-repeat: no-repeat;
       //background-size: 37px;
-      background-image: url("/img/send.svg");
+      background-image: url("../img/send.svg");
     }
 
     &_arrow-prev, &_arrow-next {
