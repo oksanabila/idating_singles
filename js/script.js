@@ -245,29 +245,30 @@ function changeDetailPage(id) {
 function nextPage(id) {
     let count = getFromStorage('users').length;
 
-    for(let i = id+1; i <=  count - 1; i++) {
-        if(users[i].active) {
-            changeDetailPage(i);
-
-            break;
-        }
+    for(let i = id; i <=  count - 1; i++) {
         if(i === count - 1) {
             i = -1;
         }
+        if(users[i + 1].active) {
+            changeDetailPage(i + 1);
+
+            break;
+        }
+
     }
 }
 
 function previousPage(id) {
     let count = getFromStorage('users').length;
 
-    for(let i = id-1; i >= 0; i--){
-        if( getFromStorage('users')[i].active) {
-            changeDetailPage(i);
-
-            break;
-        }
+    for(let i = id; i >= 0; i--){
         if(i === 0) {
             i = count;
+        }
+        if( getFromStorage('users')[i - 1].active) {
+            changeDetailPage(i - 1);
+
+            break;
         }
     }
 }
