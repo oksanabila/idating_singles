@@ -9,25 +9,43 @@
 </head>
 <body>
 <header class="header">
-    <a href="#" class="btn-round btn-round_back"></a>
+    <a href="/idating_singles/" class="btn-round btn-round_back"></a>
     <img class="header__logo" src="img/logo.svg" alt="logo">
     <a href="#" class="btn-round btn-round_profile"></a>
 </header>
 
 <main class="container">
-    <form id="register" action="#">
+    <form name="register" id="register" action="/idating_singles/cards-list.html">
         <h2 class="form-title">Create profile</h2>
         <div class="form-item">
             <label class="form-item__label">Full name</label>
-            <input class="form-item__field" type="text" name="username" placeholder="Full name" required>
+            <input
+                    class="form-item__field"
+                    type="text" name="username"
+                    placeholder="Full name"
+                    pattern="^[a-zA-Z]+$"
+                    title="only latin characters"
+                    required>
         </div>
         <div class="form-item">
             <label class="form-item__label">Your name</label>
-            <input class="form-item__field" type="text" name="username" placeholder="Your name" required>
+            <input
+                    class="form-item__field"
+                    type="text" name="username"
+                    placeholder="Your name"
+                    pattern="^[a-zA-Z]+$"
+                    title="only latin characters"
+                    required>
         </div>
         <div class="form-item">
             <label class="form-item__label">Your country</label>
-            <input class="form-item__field" type="text" name="username" placeholder="Country" required>
+            <input
+                    class="form-item__field"
+                    type="text" name="username"
+                    placeholder="Country"
+                    pattern="^[a-zA-Z]+$"
+                    title="only latin characters"
+                    required>
         </div>
         <div class="form-item form-item_switch">
             <label class="form-item__label">Your gender</label>
@@ -41,7 +59,7 @@
         <fieldset class="form-group" form="register">
             <legend class="form-group__label form-item__label">Your hobbies</legend>
             <div class="form-item form-item_checkbox">
-                <input type="checkbox" id="check_1" name="hobbies" value="music" required>
+                <input type="checkbox" id="check_1" name="hobbies" value="music">
                 <label for="check_1">Music</label>
             </div>
             <div class="form-item form-item_checkbox">
@@ -59,9 +77,9 @@
         </fieldset>
 
         <h2 class="form-title">Search distance</h2>
-        <div id="range-slider" class="range-slider"><!-- range slider element -->
-            <input type="range" /><!-- hidden -->
-            <input type="range" /><!-- hidden -->
+        <div id="range-slider" class="range-slider">
+            <input type="range" />
+            <input type="range" />
             <div class="range-slider__thumb" data-lower>
                 <span class="data-lower"></span>
             </div>
@@ -81,6 +99,6 @@
 </footer>
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/range-slider-input@2.4/dist/rangeslider.umd.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="js/script.js" type="application/javascript"></script>

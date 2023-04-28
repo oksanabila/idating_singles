@@ -88,13 +88,21 @@
       width: 80px;
       height: 80px;
       background-color: $gray-light;
-
+      transition: all 0.3s ease-out;
       &:after {
         content: '';
         position: absolute;
         bottom: 23px;
         border: 15px solid transparent;
-        border-top: 20px solid $text; /* Добавляем треугольник */
+        border-top: 20px solid $text;
+      }
+      &:hover, &:focus {
+        opacity: 0.9;
+        transition: all 0.3s ease-out;
+      }
+      &.disabled {
+        opacity: 0;
+        pointer-events: none;
       }
 
     }
@@ -116,22 +124,27 @@
   $parent: &;
   margin-bottom: 14px;
   position: relative;
+
   &_no-margin {
     margin-bottom: 0;
   }
+
   &_switch {
     #{$parent}__field {
       display: flex;
       overflow: hidden;
       padding: 3px;
+
       input {
         position: absolute;
         z-index: -1;
         opacity: 0;
+
         &:checked + label {
           background-color: $gray-light;
         }
       }
+
       label {
         width: 100%;
         text-align: center;
@@ -143,16 +156,20 @@
       }
     }
   }
+
   &_checkbox {
     display: inline-block;
     margin: 0 5px 10px;
+
     input[type="checkbox"] {
       position: absolute;
       z-index: -1;
       opacity: 0;
+
       &:checked + label {
         background-color: $gray-light;
       }
+
       & + label {
         display: inline-block;
         padding: 4px 18px;
@@ -166,9 +183,11 @@
 
   &_range {
     margin-top: 16px;
+
     .range-value {
       position: absolute;
       top: -50%;
+
       span {
         position: absolute;
         left: 50%;
@@ -179,6 +198,7 @@
     input[type="range"] {
       width: 100%;
       margin-top: 10px;
+
       & + output {
 
       }
@@ -188,6 +208,7 @@
   &__label {
     font-weight: 800;
   }
+
   &__field {
     display: inline-block;
     width: 100%;
@@ -199,7 +220,6 @@
     box-sizing: border-box;
 
   }
-
 }
 
 
@@ -239,12 +259,12 @@
 }
 
 
-form #register {
-  .form-item_checkbox input:checked #sendRegisterForm {
-    pointer-events: auto;
-  }
-}
-
-#sendRegisterForm{
-  pointer-events: none;
-}
+//form #register {
+//  .form-item_checkbox input:checked #sendRegisterForm {
+//    pointer-events: auto;
+//  }
+//}
+//
+//#sendRegisterForm{
+//  pointer-events: none;
+//}

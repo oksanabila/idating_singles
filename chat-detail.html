@@ -3,59 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
     <link href="css/style.css" rel="stylesheet" media="all">
     <title>Chat Detail</title>
 </head>
-<body>
+<body onload="chatDetailOnLoad();">
 <header class="header">
-    <a href="#" class="btn-round btn-round_back"></a>
+    <a href="/idating_singles/chat-list.html" class="btn-round btn-round_back"></a>
     <img class="header__logo" src="img/logo.svg" alt="logo">
     <a href="#" class="btn-round btn-round_profile"></a>
 </header>
-<main class="chat container">
+<main class="chat-detail container">
     <section class="chat-person chat-person_online">
        <div class="chat-person__title-wrap">
-           <div class="chat-person__img" style="background-image: url('img/avatar_xs-1.png')"></div>
-           <div class="chat-person__name">Hanna</div>
+           <div class="chat-person__img imgPrev"></div>
+           <div class="chat-person__name userName"></div>
        </div>
-        <a class="link link_primary" href="#">Block</a>
+        <a class="link link_primary" data-fancybox data-src="#blockUserChat" href="">Block</a>
+
     </section>
-    <section class="chat-messages">
-        <div class="message-item">
-            <div class="message-item__img" style="background-image: url('img/avatar_xs-1.png')"></div>
-            <div class="message-item__text">Hi sweety! I’m boring...</div>
-        </div>
-        <div class="message-item message-item_myself">
-            <div class="message-item__text">Hi! Let’s get fun!</div>
-        </div>
-
-        <div class="message-item">
-            <div class="message-item__img" style="background-image: url('img/avatar_xs-1.png')"></div>
-            <div class="message-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus explicabo saepe tempore unde! Adipisci autem cum doloremque earum eligendi exercitationem minus, molestiae mollitia obcaecati, perspiciatis sapiente tenetur, voluptate voluptatum!</div>
-        </div>
-        <div class="message-item message-item_myself">
-            <div class="message-item__text">Lorem ipsum dolor sit amet, rem reprehenderit tempore, totam ut? Ea exercitationem impedit totam!</div>
-        </div>
-
-
-        <div class="message-item">
-            <div class="message-item__img" style="background-image: url('img/avatar_xs-1.png')"></div>
-            <div class="message-item__text">Hi sweety! I’m boring...</div>
-        </div>
-        <div class="message-item message-item_myself">
-            <div class="message-item__text">Hi! Let’s get fun!</div>
-        </div>
-    </section>
-    <form class="chat-footer">
+    <section class="chat-messages messagesList"></section>
+    <div class="chat-footer">
         <div class="form-item form-item_no-margin">
-            <input class="form-item__field" type="text" name="username" placeholder="Enter your message">
+            <input class="form-item__field" id="messageInput" type="text" name="message" placeholder="Enter your message">
         </div>
-        <button class="btn-round btn-round_send"></button>
-    </form>
+        <button class="btn-round btn-round_send btnSend"></button>
+    </div>
+    <div class="modal-window" id="blockUserChat">
+        <h4 class="modal-window__title">Are you sure you want to block this user?</h4>
+        <p class="modal-window__descr">This user will be added to your blocklist</p>
+        <button class="btn btn_margin btnBlockChat">Block</button>
+        <a class="btn btn_outline" data-fancybox-close>Cancel</a>
+
+    </div>
 </main>
 
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/range-slider-input@2.4/dist/rangeslider.umd.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="js/script.js" type="application/javascript"></script>
